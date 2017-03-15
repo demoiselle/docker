@@ -13,19 +13,14 @@ RUN apt-get update && \
 	apt-get clean && \
 	update-ca-certificates -f;
 
-RUN groupadd -r jboss -g 1000 && useradd -u 1000 -r -g jboss -m -d /opt/jboss -s /sbin/nologin -c "JBoss user" jboss
-
 # Set the working directory to jboss' user home directory
-WORKDIR /opt
+WORKDIR /opt/
 
 # User root user to install software
 USER root
-
-# Switch back to jboss user
-USER jboss
 
 # Set the JAVA_HOME variable to make it clear where Java is located
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 
 # Expose the ports we're interested in
-EXPOSE 8080 9990
+EXPOSE 8080
