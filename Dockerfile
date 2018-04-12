@@ -14,6 +14,7 @@ USER root
 
 # Set the JAVA_HOME variable to make it clear where Java is located
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
+ENV PATH=$PATH:~/bin
 
 # Expose the ports we're interested in
 EXPOSE 8080
