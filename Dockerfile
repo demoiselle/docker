@@ -4,8 +4,8 @@ MAINTAINER Demoiselle Framework <demoiselle.framework@gmail.com>
 
 RUN apk update && \
     apk add ca-certificates openjdk8 git maven curl && \
-    rm -rf /var/cache/apk/*
-    apk openssh-client
+    rm -rf /var/cache/apk/* && \
+    apk openssh-client && \
     apk git
 
 # Set the working directory to jboss' user home directory
