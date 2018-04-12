@@ -3,7 +3,7 @@ FROM alpine:edge
 MAINTAINER Demoiselle Framework <demoiselle.framework@gmail.com>
 
 RUN apk update && \
-    apk add ca-certificates openssh-client openjdk8 git maven curl && \
+    apk add ca-certificates openssh openjdk8 git maven curl && \
     rm -rf /var/cache/apk/*
 
 # Set the working directory to jboss' user home directory
